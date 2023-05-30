@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercícios jQuery</title>
+
+    <script src="https://code.jquery.com/jquery-3.6.4.js" integrity="sha256-a9jBBRygX1Bh5lt8GZjXDzyOB+bWve9EiO7tROUtj/E=" crossorigin="anonymous"></script>
+
+    <style>
+        .fundo{
+            background-color: red;
+        }
+        .borda{
+            border: 3px solid black;
+        }
+    </style>
+
+</head>
+<body>
+    <h1>Funções addClass e removeClass</h1>
+
+    <form>
+        <ol id="lista">
+            <li>Nome:</li>
+            <li>Sobrenome:</li>
+        </ol>
+    </form>
+
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur, tempora id voluptate iste a magnam reprehenderit. Earum corporis, amet in nesciunt aliquid quod dolorum culpa reprehenderit commodi laboriosam ad labore?</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus optio eum maxime perferendis est velit. Earum porro quam ex vitae unde harum doloribus, aut nihil molestias sit deserunt ullam at!</p>
+
+    <button id="btn_adiciona">Adiciona Borda</button>
+    <button id="btn_remove">Remove Borda</button>
+
+    <script>
+        $('#lista').hover(function(){
+            $(this).addClass('fundo')
+        })
+
+        $('#btn_adiciona').click(()=>{
+            $('p').addClass('borda')
+        })
+        $('#btn_remove').click(()=>{
+            $('p').removeClass('borda')
+        })
+    </script>
+</body>
+</html>
