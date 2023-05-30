@@ -21,15 +21,15 @@
     <button type="submit" id="btn_enviar">Enviar</button>
 
     <script>
-
-
+     
         $('#btn_enviar').click(()=>{
-            if($('.dados').length == 0){
-                alert('Preencha todos os dados antes de enviar')
+            if($('.dados').val().length==0){
+                alert('Preencha todos os dados')
             }else{
-                alert('Dados enviados com sucesso!')
+                alert('Dados enviados')
             }
         })
-    </script>
+
+     </script>
 </body>
 </html>
