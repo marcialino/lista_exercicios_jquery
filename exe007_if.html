@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercícios jQuery</title>
+
+    <script src="https://code.jquery.com/jquery-3.6.4.js" integrity="sha256-a9jBBRygX1Bh5lt8GZjXDzyOB+bWve9EiO7tROUtj/E=" crossorigin="anonymous"></script>
+
+</head>
+<body>
+    <h1>Funções If e Else</h1>
+
+    <form>
+        <p><label>Nome:</label> <input type="text" id="campo1"> </p>
+        <p><label>Contato:</label> <input type="text" id="campo2"></p>
+    </form>
+    <button type="submit" id="btn_enviar">Enviar</button>
+
+    <script>
+
+        $('#btn_enviar').click(()=>{
+            if($('#campo1').val() != $('#campo2').val()){
+                alert('Preencha os dados corretamente, antes de enviar')
+            }else{
+                alert('Dados enviados com sucesso!')
+            }
+        }) 
+          
+    </script>
+</body>
+</html>
