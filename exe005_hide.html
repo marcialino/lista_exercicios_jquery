@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercícios jQuery</title>
+
+    
+    <script src="https://code.jquery.com/jquery-3.6.4.js" integrity="sha256-a9jBBRygX1Bh5lt8GZjXDzyOB+bWve9EiO7tROUtj/E=" crossorigin="anonymous"></script>
+
+</head>
+<body>
+    <h1>Funções Hide e Show</h1>
+
+    <p id="p1" class="p">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Rem porro blanditiis quia doloribus voluptatibus atque veniam, accusamus culpa maiores odit praesentium exercitationem ut laudantium officiis molestias cupiditate consequuntur quibusdam maxime?</p>
+
+    <p id="p2" class="p">Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus doloremque perspiciatis laborum consequuntur tempore placeat, unde, ipsum maxime odit porro cumque id alias delectus quasi blanditiis nihil facere mollitia quae!</p>
+
+    <button id="btn_exibir">Exibir</button>
+    <button id="btn_ocultar">Ocultar</button>
+
+    <script>
+        $('#btn_exibir').click(()=>{
+            $('p').show('fast')
+        })
+
+        $('#btn_ocultar').click(()=>{
+            $('#p1').hide('slow')
+        })
+    </script>
+
+</body>
+</html>
