@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercícios jQuery</title>
+
+    <script src="https://code.jquery.com/jquery-3.6.4.js" integrity="sha256-a9jBBRygX1Bh5lt8GZjXDzyOB+bWve9EiO7tROUtj/E=" crossorigin="anonymous"></script>
+
+</head>
+<body>
+    <h1>Funções Find e Each</h1>
+
+    <form>
+        <ol id="lista">
+            <li></li>
+            <li></li>
+        </ol>
+        
+    </form>
+
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus in atque odit distinctio id eveniet quos quam nisi maiores. Officiis corrupti labore reprehenderit? Quo, ipsam. Dignissimos laboriosam harum assumenda sunt?</p>
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aliquid quisquam laudantium voluptatibus rerum ab eum sunt atque unde iure sed obcaecati reprehenderit, dolorum cupiditate nam accusamus est molestiae quidem exercitationem!</p>
+
+    <script>
+        $('ol').find('li').each(function(){
+            $(this).html($(this).html() + 'item')
+        })
+        $('body').find('p').each(function(){
+            $(this).html($(this).html()+ ' FIM DO PARÁGRAFO')
+        })
+    </script>
+</body>
+</html>
