@@ -39,11 +39,16 @@
 
     <script>
         $('#btn').click(()=>{
-            let num1 = parseInt($('#num1').val())
+            if($('#num1').val().length==0 || $('#num2').val().length==0){
+                alert('Preencha todos os dados para continuar!')
+            }else{
+                let num1 = parseInt($('#num1').val())
             let num2 = parseInt($('#num2').val())
             let diferenca = num1 - num2
 
             $('#res').text(`A diferença entre os dois números é: ${diferenca}`)
+            }
+       
         })
     </script>
 </body>
