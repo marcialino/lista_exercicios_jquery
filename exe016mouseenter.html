@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercícios jQuery</title>
+
+    <script src="https://code.jquery.com/jquery-3.6.4.js" integrity="sha256-a9jBBRygX1Bh5lt8GZjXDzyOB+bWve9EiO7tROUtj/E=" crossorigin="anonymous"></script>
+
+        <style>
+            body{
+                background-color: rgb(151, 207, 209);
+                font: bold 14pt verdana;
+                color: rgb(66, 66, 83);
+            }
+            p{
+                color: antiquewhite;
+            }
+        </style>    
+
+</head>
+<body>
+    <h1>Funções: Mouseenter e Mouseleave</h1>
+
+    <div>Posicione o mouse aqui, por um momento, depois retire!</div>
+
+    <p></p>
+
+    <script>
+        $('div').mouseenter(()=>{
+            $('p').text('O mouse está no texto!')
+        })
+        $('div').mouseleave(()=>{
+            $('p').text('O mouse  saiu do texto!')
+        })
+    </script>
+</body>
+</html>
