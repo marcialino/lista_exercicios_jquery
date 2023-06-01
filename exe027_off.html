@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercícios jQuery</title>
+
+    <script src="https://code.jquery.com/jquery-3.6.4.js" integrity="sha256-a9jBBRygX1Bh5lt8GZjXDzyOB+bWve9EiO7tROUtj/E=" crossorigin="anonymous"></script>
+
+    <style>
+        body{
+            background-color:#e9e0d1 ;
+            font: normal 14pt verdana;
+        }
+        #btn{
+            font: bold 12pt verdana;
+            padding: 10px;
+            border-radius: 10px;
+        }
+    </style>
+
+</head>
+<script>
+$(document).ready(function(){
+    $("p").on("click", function(){
+        $(this).css("background-color", "pink");
+    });
+    $("button").click(function(){
+        $("p").off("click");
+    });
+});
+</script>
+</head>
+
+<body>
+    <h1>Função OFF</h1>
+    <p>Clique no texto para mudar sua cor de fundo</p>
+    <button id="btn">Se não quiser mudar o fundo, clique aqui!</button>
+
+    <script>
+        $('p').on('click', function(){
+            $(this).css('background-color', '#d9434f')
+        })
+        $('#btn').click(function(){
+            $('p').off('click')
+        })
+
+      
+    </script>
+</body>
+</html>
