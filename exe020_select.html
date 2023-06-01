@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercícios de jQuery</title>
+
+    <script src="https://code.jquery.com/jquery-3.6.4.js" integrity="sha256-a9jBBRygX1Bh5lt8GZjXDzyOB+bWve9EiO7tROUtj/E=" crossorigin="anonymous"></script>
+
+    <style>
+        body{
+            font: normal 12pt verdana;
+            background-color: rgb(221, 220, 220);
+        }
+        #nome, #idade, #contato{
+            border: 2px solid black;
+            border-radius: 5px;
+            padding: 3px;
+        }
+        #btn{
+            font: bold 12pt verdana;
+            padding: 10px;
+            border-radius: 10px;
+            margin-top: 15px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Função Select</h1>
+
+   <form>
+    <p><label>Nome:</label><input type="text" id="nome"></p>
+    <p><label>Idade: </label><input type="text" id="idade"></p>
+    <p><label>Curso Favorito:</label> 
+    <select>
+        <option>HTML</option>
+        <option>CSS</option>
+        <option>JavaScript</option>
+        <option>jQuery</option>
+    </select>
+    </p>
+    <p id="mod_sel">Módulo Selecionado:</p>
+
+    <button type="submit" id="btn">Enviar</button>
+
+   </form>
+
+   <script>
+    $('form').submit(()=>{
+        alert('Formulário enviado!')
+    })
+    $('input:text').focus(function(){
+        $(this).css('background-color', '#f3ecbe')
+    })
+    .blur(function(){
+        $(this).css('background-color','#e0c4ae')
+    })
+    $('select').change(function(){
+        var txt ='Módulo selecionado: '
+        $('select option:selected').each(function(){
+            txt+=$(this).text() + " "
+        })
+        $('#mod_sel').text(txt)
+    })
+   </script>
+</body>
+</html>
