@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercícios jQuery</title>
+
+    <script src="https://code.jquery.com/jquery-3.6.4.js" integrity="sha256-a9jBBRygX1Bh5lt8GZjXDzyOB+bWve9EiO7tROUtj/E=" crossorigin="anonymous"></script>
+
+    <style>
+        body{
+            font: normal 12pt verdana;
+            background-color: rgb(221, 220, 220);
+        }
+        #nome, #sobre, #contato{
+            border: 2px solid black;
+            border-radius: 5px;
+            padding: 3px;
+        }
+        #btn{
+            font: bold 12pt verdana;
+            padding: 10px;
+            border-radius: 10px;
+            margin-top: 15px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Função Change</h1>
+
+    <form>
+        <p><label>Nome:</label><input type="text" id="nome"></p>
+        <p><label>Sobrenome:</label><input type="text" id="sobre"></p>
+        <p><label>Contato:</label><input type="text" id="contato"></p>
+        <button type="submit" id="btn">Enviar</button>
+    </form>
+
+    <script>
+        $('form').change(()=>{
+            alert('Elemento do formulário modificado')
+        })
+        $('form').submit(()=>{
+            alert('Dados enviados com sucesso!')
+        })
+    </script>
+</body>
+</html>
