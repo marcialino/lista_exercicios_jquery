@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercícios de jQuery</title>
+
+    
+    <script src="https://code.jquery.com/jquery-3.6.4.js" integrity="sha256-a9jBBRygX1Bh5lt8GZjXDzyOB+bWve9EiO7tROUtj/E=" crossorigin="anonymous"></script>
+
+    <style>
+        #texto{
+            border: 2px solid black;
+            width: 300px;
+            height: 100px;
+            overflow: scroll;
+        }
+    </style>
+
+</head>
+<body>
+    <h1>Função Scroll</h1>
+
+    <div id="texto">Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita dignissimos fuga delectus soluta ipsam consequatur nisi rerum iure, similique quidem omnis debitis sequi mollitia laboriosam error aut a tempora neque!Lorem Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore, similique. Veniam nihil quis eveniet, excepturi a id veritatis. Ad laboriosam hic id nesciunt aut distinctio sint doloremque iste minima eos?
+
+    </div>
+
+    <p></p>
+
+    <script>
+        var num=0
+        $('#texto').scroll(()=>{
+            $('p').text(`O conteúdo foi rolado:${num+=1}`)
+        })
+    </script>
+</body>
+</html>
