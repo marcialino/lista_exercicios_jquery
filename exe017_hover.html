@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercícios jQuery</title>
+
+    
+    <script src="https://code.jquery.com/jquery-3.6.4.js" integrity="sha256-a9jBBRygX1Bh5lt8GZjXDzyOB+bWve9EiO7tROUtj/E=" crossorigin="anonymous"></script>
+
+    <style>
+        body{
+            background-color:rgb(211, 238, 211);
+            font: normal 14pt Verdana;
+        }
+        .caixa{
+            border: 3px solid green;
+            color:blueviolet;
+            border-radius: 10px;
+            padding: 15px;
+            background-color: white;
+
+        }
+    </style>
+
+</head>
+<body>
+    <h1>Função Hover</h1>
+
+    <div id="caixa">
+        Posicione o mouse aqui para ver o resultado!
+    </div>
+
+    <script>
+        $('#caixa').hover(function(){
+            $(this).addClass('caixa')
+        })
+    </script>
+</body>
+</html>
