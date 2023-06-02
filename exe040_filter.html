@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercícios jQuery</title>
+
+    <script src="https://code.jquery.com/jquery-3.6.4.js" integrity="sha256-a9jBBRygX1Bh5lt8GZjXDzyOB+bWve9EiO7tROUtj/E=" crossorigin="anonymous"></script>
+
+</head>
+<body>
+    <h1>Método Filter e Not</h1>
+    <h3>Filter, retorna elementos bem específicos e o not retorna os elementos que não fazem equivalência com o filtro indicado.</h3>
+    <p class="mc">Canal Márcia Lino</p>
+    <p>Cursp jQuery</p>
+    <p>www.aquelesabor.com.br</p>
+    <p class="mc"></p>
+    <p>Curso de jQuery</p>
+
+    <script>
+        $('p').filter('.mc').css({'border': '2px solid #f00','background-color': '#ccc'})
+
+        $('p').not('.mc').css({'border':'1px solid #f00', 'background-color': '#cc8'})
+    </script>
+</body>
+</html>
