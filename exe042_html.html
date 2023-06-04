@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercícios jQuery</title>
+
+    <script src="https://code.jquery.com/jquery-3.6.4.js" integrity="sha256-a9jBBRygX1Bh5lt8GZjXDzyOB+bWve9EiO7tROUtj/E=" crossorigin="anonymous"></script>
+
+</head>
+<body>
+    <h1>Método para identificar o texto que está no HTML</h1>
+
+    <form>
+        <label>Nome:</label>
+        <input type="text" id="txtNome"><br><br>
+    </form>
+    <button id="btn">Inserir Valor</button>
+
+    <p>Canal Márcia Lino<b></p>
+    <button id="btn1">Mostrar texto</button><br><br>
+
+    <span>Curso jQuery</span><br><br>
+    <button id="btn2">Mostrar texto</button>
+
+    <script>
+        $('#btn').click(()=>{
+            $('#txtNome').val('Botão clicado.')
+        })
+        $('#btn1').click(()=>{
+            alert($('p').html())
+        })
+        $('#btn2').click(()=>{
+            $('span').html('Texto definido')
+        })/*quando clicar no botão o texto do span muda de Curso jQuery para Texto definido.*/
+    </script>
+</body>
+</html>
