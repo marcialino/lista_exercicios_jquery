@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercícios jQuery</title>
+
+    <script src="https://code.jquery.com/jquery-3.6.4.js" integrity="sha256-a9jBBRygX1Bh5lt8GZjXDzyOB+bWve9EiO7tROUtj/E=" crossorigin="anonymous"></script>
+
+    <style>
+        #caixa{
+            background-color: lime;
+            width: 150px;
+            height: 100px;
+            font: bold 12pt verdana;
+            padding-top: 50px;
+            justify-content: center;
+            display: flex;
+            border: 2px solid black;
+
+        }
+        .btn{
+            padding: 12px;
+            font: bold 12pt verdana;
+            border-radius: 10px;
+        }
+    </style>
+
+</head>
+<body>
+    <h1>Método Delay</h1>
+    <h3>Este método cria um intervalo de atraso antes da execução da animação.</h3>
+
+    <div id="caixa">Márcia Lino</div><br><br>
+
+    <button id="btn1" class="btn"> Ocultar</button>
+    <button id="btn2" class="btn">Mostrar</button>
+
+<script>
+    $('#btn1').click(()=>{
+        $('#caixa').delay(1000).hide(250)
+    })
+    $('#btn2').click(()=>{
+        $('#caixa').show(250)
+    })
+</script>
+</body>
+</html>
