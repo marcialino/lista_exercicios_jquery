@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercícios de jQuery</title>
+
+    <script src="https://code.jquery.com/jquery-3.6.4.js" integrity="sha256-a9jBBRygX1Bh5lt8GZjXDzyOB+bWve9EiO7tROUtj/E=" crossorigin="anonymous"></script>
+
+    <style>
+        .btn{
+            padding: 12px;
+            font: bold 10pt verdana;
+            border-radius: 10px;
+        }
+        p{
+            background-color: #f00;
+            width: 300px;
+            padding: 20px;
+            text-align: center;
+            border-radius: 5px;
+            position: absolute;
+            top: 180px;
+            left: 10px;
+            font: bold 12pt verdana;
+
+        }
+    </style>
+
+</head>
+<body>
+    <h1>Efeitos SlideUp e SlideDown</h1>
+    <h3>Estes efeitos mostram e ocultam, respectivamente, os elementos em um efeito deslizante.</h3>
+
+    <button id="btn1" class="btn">Para cima</button>
+    <button id="btn2" class="btn">Para baixo</button>
+
+    <p id="txt">Márcia Lino</p>
+
+    <script>
+        $('#btn1').click(()=>{
+            $('#txt').slideUp()
+        })
+        $('#btn2').click(()=>{
+            $('#txt').slideDown()
+        })
+    </script>
+</body>
+</html>
