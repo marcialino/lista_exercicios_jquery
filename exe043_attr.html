@@ -12,6 +12,15 @@
 <body>
     <h1>Método Attr() - define ou retorna o valor do atributo indicado.</h1>
 
-    <div width="200px"></div>
+    <div width="200px" heigth="100px">
+        Clique aqui para mostrar a largura da DIV!
+    </div>
+
+    <script>
+        $('div').click(function(){
+            alert('Largura da div: '+ $(this).attr('width'))
+            $(this).attr('style','background-color:#f88')
+        })
+    </script>
 </body>
 </html>
