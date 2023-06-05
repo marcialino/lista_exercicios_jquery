@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercícios jQuery</title>
+
+    <script src="https://code.jquery.com/jquery-3.6.4.js" integrity="sha256-a9jBBRygX1Bh5lt8GZjXDzyOB+bWve9EiO7tROUtj/E=" crossorigin="anonymous"></script>
+
+    <style>
+        #caixa{
+            background-color:darkgrey;
+            width: 150px;
+            height: 100px;
+            font: bold 12pt verdana;
+            padding-top: 50px;
+            justify-content: center;
+            display: flex;
+            border: 2px solid black;
+
+        }
+        .btn{
+            padding: 12px;
+            font: bold 12pt verdana;
+            border-radius: 10px;
+        }
+    </style>
+
+</head>
+<body>
+    <h1>Método Finish</h1>
+    <h3>Este método finaliza o cliclo de animação,concluindo-o rapidamente. Sem cancelar a mesma.</h3>
+
+    <div id="caixa">Márcia Lino</div><br><btr></btr>
+
+    <button id="btn1" class="btn">Animar</button>
+    <button id="btn2" class="btn">Finalizar</button>
+
+    <script>
+        $('#btn1').click(()=>{
+            $('#caixa').animate({width: '500'},5000)
+        })
+        $('#btn2').click(()=>{
+            $('#caixa').finish()
+        })
+    </script>
+</body>
+</html>
