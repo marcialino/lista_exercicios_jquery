@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercícios jQuery</title>
+
+    <script src="https://code.jquery.com/jquery-3.6.4.js" integrity="sha256-a9jBBRygX1Bh5lt8GZjXDzyOB+bWve9EiO7tROUtj/E=" crossorigin="anonymous"></script>
+
+    <style>
+        #caixa{
+            background-color:darkgrey;
+            width: 150px;
+            height: 100px;
+            font: bold 12pt verdana;
+            padding-top: 50px;
+            justify-content: center;
+            display: flex;
+            border: 2px solid black;
+
+        }
+        .btn{
+            padding: 12px;
+            font: bold 12pt verdana;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Método Queue</h1>
+    <h3>Este método retorna informação da fila de animações do elemento.No exemplo vai retornar o tamanho da fila</h3>
+
+    <div id="caixa">Márcia Lino</div><br><br>
+    <button id="btn" class="btn">Animar</button>
+    <p id="txt">Tamanho da Fila:</p>
+
+    <script>
+        $('#btn').click(()=>{
+            var cx =$('#caixa')
+            cx.animate({width:'300'},500)
+            .animate({height:'300'},500)
+            .animate({width:'150px'},500)
+            .animate({height:'100'},500)
+            $('#txt').text(cx.queue().length)
+        })
+    </script>
+</body>
+</html>
