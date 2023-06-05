@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercícios jQuery</title>
+
+    <script src="https://code.jquery.com/jquery-3.6.4.js" integrity="sha256-a9jBBRygX1Bh5lt8GZjXDzyOB+bWve9EiO7tROUtj/E=" crossorigin="anonymous"></script>
+
+    <style>
+        #caixa{
+            background-color: rgb(227, 134, 13);
+            width: 150px;
+            height: 100px;
+            font: bold 14pt verdana;
+            display: flex;
+            justify-content: center;
+            padding-top: 50px;
+            border: 2px solid black;
+        }
+        #btn{
+            font: bold 12px verdana;
+            padding: 12px;
+            border: 3px solid black;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Método Toggle</h1>
+    <h3>Inverter animações!</h3>
+
+    <div id="caixa">Márcia Lino</div><br><br>
+
+    <button id="btn">Animar</button>
+
+    <script>
+        $('#btn').click(()=>{
+            $('#caixa').animate({width:'toggle', height: 'toggle', opacity:'toggle'})
+        })
+    </script>
+</body>
+</html>
