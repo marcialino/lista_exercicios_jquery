@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercícios jQuery</title>
+
+    <script src="https://code.jquery.com/jquery-3.6.4.js" integrity="sha256-a9jBBRygX1Bh5lt8GZjXDzyOB+bWve9EiO7tROUtj/E=" crossorigin="anonymous"></script>
+
+    <style>
+        .btn{
+            padding: 12px;
+            font: bold 10pt verdana;
+            border-radius: 10px;
+        }
+        p{
+            background-color: #f00;
+            width: 300px;
+            padding: 20px;
+            text-align: center;
+            border-radius: 5px;
+            position: absolute;
+            top: 180px;
+            left: 10px;
+            font: bold 12pt verdana;
+
+        }
+    </style>
+
+</head>
+<body>
+    <h1>Métodos StopAll e GoToEnd</h1>
+    <h3>StopAll:Pára todas as animações da fila, não apenas à corrente.
+        GpTpEnd: completa de forma instantânea todas as animações, executando apenas a última.
+    </h3>
+
+    <button id="btn1" class="btn">Aumentar</button>
+    <button id="btn2" class="btn">Parar animação</button>
+
+    <p id="txt">Márcia Lino</p>
+
+    <script>
+        $('#btn1').click(()=>{
+            $('#txt').animate({width:'400'},2000)
+            $('#txt').animate({height:'400'},2000)
+        })
+        $('#btn2').click(()=>{
+            $('#txt').stop(false, true)
+        })
+    </script>
+</body>
+</html>
