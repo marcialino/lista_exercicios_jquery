@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercícios jQuery</title>
+
+    <script src="https://code.jquery.com/jquery-3.6.4.js" integrity="sha256-a9jBBRygX1Bh5lt8GZjXDzyOB+bWve9EiO7tROUtj/E=" crossorigin="anonymous"></script>
+
+    <style>
+
+        body{
+            font: normal 12pt verdana;
+        }
+        .btn{
+            padding: 12px;
+            font: bold 12pt verdana;
+            border-radius: 10px;
+        }
+        .destaque{
+            font: bold 20pt verdana;
+            color: #f00;
+            background-color: #ff8;
+        }
+    </style>
+
+</head>
+<body>
+    <h1>Método Clone</h1>
+    <h3>Clona o elemento especificado. No exemplo todos os elementos p são clonados e adicionados no body.</h3>
+
+    <p>Canal Márcia Lino</p>
+    <p>Curso jQuery</p>
+
+    <button class="btn">Clonar</button>
+
+    <script>
+        $('.btn').click(()=>{
+            $('p').clone().appendTo('body')
+        })
+    </script>
+</body>
+</html>
