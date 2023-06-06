@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercícios jQuery</title>
+
+    <script src="https://code.jquery.com/jquery-3.6.4.js" integrity="sha256-a9jBBRygX1Bh5lt8GZjXDzyOB+bWve9EiO7tROUtj/E=" crossorigin="anonymous"></script>
+
+    <style>
+
+        body{
+            font: normal 12pt verdana;
+        }
+        .btn{
+            padding: 12px;
+            font: bold 12pt verdana;
+            border-radius: 10px;
+        }
+    </style>
+
+</head>
+<body>
+    <h1>Método Remove</h1>
+    <h3>Remove o conteúdo do elemento selecionado.</h3>
+
+    <button class="btn">Remover conteúdo</button>
+    <p>Márcia Lino</p>
+
+    <script>
+        $('.btn').click(()=>{
+            $('p').remove()
+        })
+    </script>
+</body>
+</html>
